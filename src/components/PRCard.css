@@ -1,0 +1,126 @@
+.pr-card {
+  background: linear-gradient(135deg, rgba(23, 25, 47, 0.6) 0%, rgba(35, 38, 70, 0.6) 100%);
+  border: 1px solid rgba(147, 194, 219, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.pr-card:hover {
+  border-color: rgba(147, 194, 219, 0.5);
+  box-shadow: 0 10px 40px rgba(99, 102, 241, 0.15);
+  background: linear-gradient(135deg, rgba(23, 25, 47, 0.8) 0%, rgba(35, 38, 70, 0.8) 100%);
+}
+
+.pr-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.status-accepted {
+  background: rgba(74, 222, 128, 0.2);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+}
+
+.status-excluded {
+  background: rgba(248, 113, 113, 0.2);
+  color: #f87171;
+  border: 1px solid rgba(248, 113, 113, 0.3);
+}
+
+.status-pending {
+  background: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.pr-info-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(147, 194, 219, 0.2);
+  border: 1px solid rgba(147, 194, 219, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #93C2DB;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pr-info-icon:hover {
+  background: rgba(147, 194, 219, 0.3);
+  border-color: #93C2DB;
+}
+
+.pr-content {
+  margin-bottom: 1.5rem;
+}
+
+.pr-title {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.pr-number {
+  color: #93C2DB;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.btn-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 2px solid #93C2DB;
+  color: #93C2DB;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-github:hover {
+  background: #93C2DB;
+  color: #17192F;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(147, 194, 219, 0.4);
+}
+
+@media (max-width: 768px) {
+  .pr-card {
+    padding: 1.25rem;
+  }
+
+  .pr-title {
+    font-size: 0.9rem;
+  }
+
+  .btn-github {
+    font-size: 0.75rem;
+    padding: 0.6rem 1rem;
+  }
+}
