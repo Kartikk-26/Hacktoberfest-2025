@@ -5,7 +5,14 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: 1rem 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .nav {
@@ -13,6 +20,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -22,6 +31,7 @@
   font-weight: 700;
   font-size: 1.25rem;
   color: #fff;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -62,7 +72,29 @@
   border-color: #93C2DB;
 }
 
+@media (max-width: 1024px) {
+  .nav {
+    gap: 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .header {
+    padding: 0.75rem;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .nav {
+    gap: 1rem;
+  }
+
   .nav-links {
     gap: 1rem;
   }
@@ -71,7 +103,52 @@
     font-size: 0.75rem;
   }
 
+  .logo {
+    gap: 0.5rem;
+  }
+
+  .logo svg {
+    width: 32px;
+    height: 32px;
+  }
+
   .logo span {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .logo svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .logo span {
+    font-size: 0.9rem;
+  }
+
+  .nav-links a {
+    font-size: 0.7rem;
+    padding: 0.25rem 0;
   }
 }

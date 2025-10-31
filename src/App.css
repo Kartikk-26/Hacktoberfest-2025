@@ -12,6 +12,34 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
+  padding: 0 1rem;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0 0.75rem;
+  }
+  
+  .app-container {
+    padding: 0 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0 0.5rem;
+  }
+  
+  .app-container {
+    padding: 0 0.5rem;
+  }
 }
 
 /* Animated background gradient */
