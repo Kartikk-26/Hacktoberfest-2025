@@ -50,30 +50,63 @@ const Stats = ({ pullRequests }) => {
   ];
 
   return (
+      
     <div className="stats-container">
-      {statCards.map((stat, index) => (
+      {statCards.map(({ label, value, color }, index) => (
         <motion.div
-          key={stat.label}
+          key={label}
           className="stat-card"
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: index * 0.1 + 0.3, duration: 0.5 }}
-          whileHover={{ y: -5, scale: 1.02 }}
+          initial={{ 
+            opacity: 0,
+            scale: 0.7,
+            rotateY: -15,
+            x: -30 
+          }}
+          animate={{ 
+            opacity: 1,
+            scale: 1,
+            rotateY: 0,
+            x: 0
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 80,
+            damping: 13,
+            mass: 0.8,
+            delay: index * 0.2
+          }}
         >
-          <h3>{stat.label}</h3>
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              damping: 15,
+              delay: index * 0.2 + 0.3
+            }}
+          >
+            {label}
+          </motion.h3>
           <motion.p
             className="stat-number"
-            style={{ color: stat.color }}
-            initial={{ scale: 0.5 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: index * 0.1 + 0.5, type: "spring", stiffness: 200 }}
+            style={{ color }}
+            initial={{ scale: 0, rotateX: 90 }}
+            animate={{ scale: 1, rotateX: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 60,
+              damping: 8,
+              delay: index * 0.2 + 0.5
+            }}
           >
-            {stat.value}
+            {value}
           </motion.p>
         </motion.div>
       ))}
     </div>
   );
+
 };
 
 export default Stats;

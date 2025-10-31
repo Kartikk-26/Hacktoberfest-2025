@@ -16,11 +16,16 @@ const PRCard = ({ pr, index }) => {
   return (
     <motion.div
       className="pr-card"
-      initial={{ x: -50, opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ delay: index * 0.05, duration: 0.5 }}
-      whileHover={{ scale: 1.02, x: 10 }}
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1, margin: "100px" }}
+      transition={{ 
+        type: "spring", 
+        stiffness: 200, 
+        damping: 20, 
+        delay: index * 0.03
+      }}
+      whileHover={{ scale: 1.02, y: -3 }}
     >
       <div className="pr-header">
         <motion.div

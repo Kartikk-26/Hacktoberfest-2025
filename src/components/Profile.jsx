@@ -33,10 +33,27 @@ const Profile = () => {
           <p className="profile-role">
             DevOps Engineer at <a href="https://kvgai.com/" target="_blank" rel="noopener noreferrer" className="company-link">KVGAI TECH</a>
           </p>
-          <div className="profile-badges">
-            <span className="badge">Hacktoberfest 2025</span>
-            <span className="badge">Open Source Contributor</span>
-          </div>
+          <motion.div 
+            className="profile-badges"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+          >
+            <motion.span 
+              className="badge"
+              whileHover={{ scale: 1.05, y: -2 }}
+              transition={{ type: "spring", stiffness: 400 }}
+            >
+              Hacktoberfest 2025
+            </motion.span>
+            <motion.span 
+              className="badge"
+              whileHover={{ scale: 1.05, y: -2 }}
+              transition={{ type: "spring", stiffness: 400 }}
+            >
+              Open Source Contributor
+            </motion.span>
+          </motion.div>
         </motion.div>
       </div>
     </motion.div>

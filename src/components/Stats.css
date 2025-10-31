@@ -12,13 +12,19 @@
   padding: 2rem;
   text-align: center;
   backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
   cursor: pointer;
+  transform: translateZ(0) perspective(1000px);
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 
 .stat-card:hover {
-  border-color: rgba(147, 194, 219, 0.5);
-  box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
+  border-color: rgba(147, 194, 219, 0.6);
+  box-shadow: 
+    0 25px 65px rgba(99, 102, 241, 0.3),
+    0 0 30px rgba(147, 194, 219, 0.15);
+  transform: translateY(-12px) scale(1.02) rotateX(2deg);
 }
 
 .stat-card h3 {

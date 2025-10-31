@@ -90,20 +90,24 @@
 
 .profile-badges {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
+  perspective: 1000px;
 }
 
 .badge {
-  padding: 0.5rem 1rem;
-  background: rgba(99, 102, 241, 0.2);
+  padding: 0.6rem 1.2rem;
+  background: rgba(99, 102, 241, 0.15);
   border: 1px solid rgba(147, 194, 219, 0.3);
   border-radius: 20px;
   color: #93C2DB;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.1);
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
