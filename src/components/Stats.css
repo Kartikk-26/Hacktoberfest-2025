@@ -12,13 +12,19 @@
   padding: 2rem;
   text-align: center;
   backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
   cursor: pointer;
+  transform: translateZ(0) perspective(1000px);
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 
 .stat-card:hover {
-  border-color: rgba(147, 194, 219, 0.5);
-  box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
+  border-color: rgba(147, 194, 219, 0.6);
+  box-shadow: 
+    0 25px 65px rgba(99, 102, 241, 0.3),
+    0 0 30px rgba(147, 194, 219, 0.15);
+  transform: translateY(-12px) scale(1.02) rotateX(2deg);
 }
 
 .stat-card h3 {
@@ -37,17 +43,47 @@
   font-family: 'JetBrains Mono', monospace;
 }
 
+@media (max-width: 1024px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin: 1.5rem 0 2.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .stats-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    margin: 1.25rem 0 2rem;
   }
 
   .stat-card {
-    padding: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .stat-card h3 {
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
   }
 
   .stat-number {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1rem 0 1.5rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
   }
 }

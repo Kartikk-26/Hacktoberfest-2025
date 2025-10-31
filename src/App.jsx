@@ -14,7 +14,7 @@ function App() {
       <Header />
 
       <main className="main">
-        <div className="container">
+        <div className="app-container">
           {/* Profile Section */}
           <Profile />
 

@@ -90,25 +90,41 @@
 
 .profile-badges {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
+  perspective: 1000px;
 }
 
 .badge {
-  padding: 0.5rem 1rem;
-  background: rgba(99, 102, 241, 0.2);
+  padding: 0.6rem 1.2rem;
+  background: rgba(99, 102, 241, 0.15);
   border: 1px solid rgba(147, 194, 219, 0.3);
   border-radius: 20px;
   color: #93C2DB;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.1);
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .profile-section {
+    padding: 1.75rem;
+    margin: 2rem 0;
+  }
+
+  .profile-name {
+    font-size: 2.25rem;
+  }
 }
 
 @media (max-width: 768px) {
   .profile-section {
     padding: 1.5rem;
+    margin: 1.5rem 0;
   }
 
   .profile-content {
@@ -136,5 +152,45 @@
 
   .profile-badges {
     justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-section {
+    padding: 1.25rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+  }
+
+  .profile-content {
+    gap: 1.25rem;
+  }
+
+  .avatar-ring {
+    width: 80px;
+    height: 80px;
+  }
+
+  .avatar-inner {
+    font-size: 1.25rem;
+  }
+
+  .profile-name {
+    font-size: 1.75rem;
+  }
+
+  .profile-role {
+    font-size: 0.875rem;
+  }
+
+  .badge {
+    padding: 0.4rem 0.875rem;
+    font-size: 0.7rem;
   }
 }

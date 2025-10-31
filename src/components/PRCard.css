@@ -4,13 +4,13 @@
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+  backdrop-filter: blur(12px);
 }
 
 .pr-card:hover {
   border-color: rgba(147, 194, 219, 0.5);
-  box-shadow: 0 10px 40px rgba(99, 102, 241, 0.15);
+  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.2);
   background: linear-gradient(135deg, rgba(23, 25, 47, 0.8) 0%, rgba(35, 38, 70, 0.8) 100%);
 }
 
@@ -110,17 +110,65 @@
   box-shadow: 0 5px 20px rgba(147, 194, 219, 0.4);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .pr-card {
     padding: 1.25rem;
   }
+  
+  .pr-header {
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pr-card {
+    padding: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  .pr-header {
+    margin-bottom: 1rem;
+  }
+
+  .status-badge {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.7rem;
+  }
 
   .pr-title {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .pr-number {
+    font-size: 0.8rem;
   }
 
   .btn-github {
+    width: 100%;
+    justify-content: center;
     font-size: 0.75rem;
     padding: 0.6rem 1rem;
+  }
+
+  .pr-info-icon {
+    width: 25px;
+    height: 25px;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pr-card {
+    padding: 1rem;
+  }
+
+  .pr-content {
+    margin-bottom: 1rem;
+  }
+
+  .status-badge {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.65rem;
   }
 }
